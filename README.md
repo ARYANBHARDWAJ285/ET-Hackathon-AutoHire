@@ -29,5 +29,5 @@ Instead of a standard single-prompt LLM wrapper, AutoHire utilizes a highly stru
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/ARYANBHARDWAJ285/ET-Hackathon-AutoHire.git](https://github.com/ARYANBHARDWAJ285/ET-Hackathon-AutoHire.git)
+git clone [https://github.com/ARYANBHARDWAJ285/ET-Hackathon-AutoHire.git]
 cd ET-Hackathon-AutoHire
