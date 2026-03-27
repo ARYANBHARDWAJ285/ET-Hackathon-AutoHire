@@ -16,8 +16,8 @@ app.post('/api/analyze-resume', async (req, res) => {
         // Ensure max efficiency
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-        // THE MULTI-AGENT ENTERPRISE PROMPT
-     // THE RUTHLESS MULTI-AGENT ENTERPRISE PROMPT
+        
+     // MULTI-AGENT ENTERPRISE PROMPT
         const prompt = `
         You are a ruthless, highly critical Autonomous Enterprise HR System. Do not sugarcoat anything. You are analyzing a candidate against a Senior Enterprise Job Description. 
         CRITICAL RULES: Output EXACTLY ONE single line per bullet point (Max 15 words). Be brutally honest.
