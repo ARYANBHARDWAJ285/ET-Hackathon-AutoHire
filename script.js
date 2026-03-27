@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         introCard.classList.remove('hidden');
     });
 
-    // Reset everything
+    // Reset 
     resetBtn.addEventListener('click', () => {
         resultsSection.classList.add('hidden');
         uploadCard.classList.remove('hidden');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         aiOutput.innerHTML = "";
     });
 
-    // --- FILE HANDLING LOGIC ---
+    // FILE HANDLING 
     fileInput.addEventListener('change', (event) => {
         const file = event.target.files[0];
         if (file) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- API CONNECTION LOGIC ---
+    // API CONNECTION 
     analyzeBtn.addEventListener('click', async () => {
         const jobDescription = jdInput.value;
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // --- AGENT LOADING ANIMATION ---
+        //  AGENT LOADING 
         analyzeBtn.disabled = true;
         const loadingMessages = [
             "Agent 1: Ingesting Data...",
@@ -94,21 +94,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.success) {
                 uploadCard.classList.add('hidden');
                 
-                // PARSING THE UI
-                // 1. Massive Green Match Score
+               
+                // Massive Green Match Score
                 let formattedText = data.analysis.replace(/### 📊 Enterprise Match Score\n(.*)/g, '<div style="font-size: 4rem; font-weight: 800; color: #34d399; text-align: center; margin-bottom: 20px; text-shadow: 0 0 20px rgba(52, 211, 153, 0.4);">$1<div style="font-size: 1rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Match Fit</div></div>');
 
-                // 2. Dark Glass Section Headers
+                // Dark Glass Section Headers
                 formattedText = formattedText.replace(/### (.*)/g, '<div style="background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 8px; margin-top: 25px; margin-bottom: 12px; border-left: 4px solid #8b5cf6; font-size: 1.15rem; font-weight: 700; color: #f8fafc;">$1</div>');
 
-                // 3. Bold Text (Neon accent)
+                // 3Bold Text 
                 formattedText = formattedText.replace(/\*\*(.*?)\*\*/g, '<span style="color: #38bdf8; font-weight: 700;">$1</span>');
 
                 formattedText = formattedText.replace(/\n/g, '<br>');
 
                 aiOutput.innerHTML = formattedText;
                 
-                // Add the Autonomous Action Buttons
+                //  Autonomous Action Buttons
                 aiOutput.innerHTML += `
                     <div style="margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 15px; justify-content: center;">
                         <button onclick="alert('Agent 4 has dispatched the feedback email to the candidate.')" style="padding: 10px 20px; background: rgba(239, 68, 68, 0.1); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 6px; font-weight: bold; cursor: pointer;">Execute Auto-Reject</button>
