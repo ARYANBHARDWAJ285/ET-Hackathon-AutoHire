@@ -1,4 +1,4 @@
-/* Reset basic styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     padding: 40px 20px;    
 }
 
-/* --- AMBIENT BACKGROUND GLOWS --- */
+/* BACKGROUND GLOWS*/
 .glow-circle {
     position: fixed;
     border-radius: 50%;
@@ -31,7 +31,7 @@ body {
 .green-glow { top: -10%; right: -10%; width: 500px; height: 500px; background: rgba(16, 185, 129, 0.15); }
 .purple-glow { bottom: -10%; left: -10%; width: 600px; height: 600px; background: rgba(139, 92, 246, 0.15); }
 
-/* --- TYPOGRAPHY & LAYOUT --- */
+/*  TYPOGRAPHY & LAYOUT  */
 .container { text-align: center; max-width: 850px; width: 100%; z-index: 10; }
 
 .badge {
@@ -59,7 +59,7 @@ body {
     letter-spacing: -1px;
 }
 
-/* --- APPLE GLASS CARD --- */
+/* APPLE GLASS CARD  */
 .glass-card {
     background: rgba(15, 23, 42, 0.6);
     backdrop-filter: blur(20px);
@@ -75,7 +75,7 @@ body {
 .glass-card h2 { color: #f8fafc; margin-bottom: 1rem; font-size: 1.8rem; }
 .glass-card p { color: #94a3b8; line-height: 1.7; margin-bottom: 1.5rem; font-size: 1.05rem; }
 
-/* --- BUTTONS --- */
+/*  BUTTONS  */
 .primary-btn {
     padding: 12px 24px;
     font-size: 1rem;
@@ -106,7 +106,7 @@ body {
 .text-btn { background: none; border: none; color: #64748b; cursor: pointer; padding: 12px; font-weight: 500;}
 .text-btn:hover { color: #f8fafc; }
 
-/* --- AGENT FEATURE GRID --- */
+/*  AGENT  GRID */
 .agent-feature-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -146,10 +146,10 @@ body {
     line-height: 1.4 !important;
 }
 
-/* --- STATE CLASSES --- */
+/* STATE CLASSES  */
 .hidden { display: none !important; }
 
-/* --- PAGE 2 LAYOUT --- */
+/* PAGE 2 LAYOUT  */
 .upload-grid { display: flex; gap: 24px; margin-bottom: 24px; }
 @media (max-width: 768px) { .upload-grid { flex-direction: column; } }
 
@@ -183,7 +183,7 @@ textarea {
 textarea:focus { outline: none; border-color: #34d399; box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.2); }
 .action-buttons { display: flex; justify-content: space-between; margin-top: 20px; }
 
-/* AI Output Container */
+/* AI Output  */
 #ai-output {
     text-align: left; color: #cbd5e1; 
     font-size: 1rem; line-height: 1.8; 
