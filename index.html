@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoHire | Autonomous HR Orchestration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-circle green-glow"></div>
+    <div class="glow-circle purple-glow"></div>
+
+    <main class="container">
+        <div class="badge">Problem Statement 2: Autonomous Workflows</div>
+        <h1 class="header-title">AutoHire Enterprise</h1>
+        
+        <section class="glass-card" id="intro-card">
+            <h2>Autonomous Talent Orchestration</h2>
+            <p style="margin-bottom: 2rem;">AutoHire eliminates manual screening. Our swarm takes complete ownership of the enterprise recruitment pipeline in seconds.</p>
+            
+            <div class="agent-feature-grid">
+                <div class="agent-feature">
+                    <span class="agent-icon">📊</span>
+                    <div>
+                        <h4>Agent 1: Gap Analysis</h4>
+                        <p>Semantic technical skill matching.</p>
+                    </div>
+                </div>
+                <div class="agent-feature">
+                    <span class="agent-icon">🛡️</span>
+                    <div>
+                        <h4>Agent 2: Fluff Auditor</h4>
+                        <p>Flags vague or unverified claims.</p>
+                    </div>
+                </div>
+                <div class="agent-feature">
+                    <span class="agent-icon">🎤</span>
+                    <div>
+                        <h4>Agent 3: Interview Prober</h4>
+                        <p>Generates targeted technical questions.</p>
+                    </div>
+                </div>
+                <div class="agent-feature">
+                    <span class="agent-icon">✉️</span>
+                    <div>
+                        <h4>Agent 4: Auto-Workflows</h4>
+                        <p>Drafts personalized candidate feedback.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: right; margin-top: 2.5rem;">
+                <button id="start-btn" class="primary-btn">Initialize Agent Swarm</button>
+            </div>
+        </section>
+
+        <section class="glass-card hidden" id="upload-card">
+            <h2>Pipeline Control Center</h2>
+            
+            <div class="upload-grid">
+                <div class="drop-zone" id="drop-zone">
+                    <div class="icon">📄</div>
+                    <h3>Upload Candidate Resume</h3>
+                    <input type="file" id="file-input" accept=".txt" hidden>
+                    <button class="secondary-btn" onclick="document.getElementById('file-input').click()">Browse Files</button>
+                    <p id="file-name" class="small-text">No candidate selected</p>
+                </div>
+
+                <div class="jd-zone">
+                    <h3>Target Enterprise Role</h3>
+                    <textarea id="jd-input" placeholder="Paste the enterprise job description requirements here..."></textarea>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="back-btn" class="text-btn">Cancel</button>
+                <button id="analyze-btn" class="primary-btn">Execute Swarm Analysis</button>
+            </div>
+        </section>
+
+        <section class="glass-card hidden" id="results-section">
+            <h2>⚙️ Agent Swarm Complete</h2>
+            
+            <div id="ai-output">
+                </div>
+
+            <button id="reset-btn" class="secondary-btn" style="width: 100%; border-color: rgba(255,255,255,0.2);">Process Next Candidate</button>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
